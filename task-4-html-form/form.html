@@ -1,0 +1,157 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Patient Form</title>
+    <link rel="stylesheet" href="/style.css">
+</head>
+<body>
+    <form action="post" class="patient-details">
+        <div class="primary-details">
+            <h4>Primary Details</h4>
+            <div>
+                <label for="enterNo">Medicare No</label>
+                <input type="number" id="enterNo">
+                <label for="validity">Valid Till</label>
+                <input type="date">
+                <input type="button">
+            </div>
+            <div>
+                Title
+                <select name="none" id="title">
+                <option value="none">None</option>
+            </select>
+            </div>
+            <div class="naming">Lastname, Firstname, Middlename</div>
+            <div>
+                <label for="name">Name </label>
+                <input type="text" id="name" name="patient name">
+            </div>
+            <div>
+                <label for="preName">Pref. Name</label>
+                <input type="text" id="preName" name="prefered name">
+            </div>
+            <div>
+                <label for="birthdate">DOB</label>
+                <input type="date" id="birthdate">
+            </div>
+            <div class="gender">
+            Sex
+            <input type="radio" id="male" name="gender" value="male">
+            <label for="male">Male</label>
+            <input type="radio" id="female" name="gender" value="female">
+            <label for="female">Female</label>
+        </div>
+        <div>
+            <label for="familyName">Family Name</label>
+            <input type="text" id="familyName" name="familyname">
+        </div>
+        </div>
+        <div class="contact-details">
+            <h4>Contact Details</h4>
+            <div>
+                Phone
+                <input type="text" id="home" name="number">
+                <input type="text" id="work" name="number">
+                <div>
+                    <input type="text" id="mobile" name="number">
+                    <input type="text" id="fax" name="number">
+                </div>
+                <div>
+                    <input type="text" id="next" name="number">
+                    <input type="text" id="nextOf" name="number">
+                </div>
+            </div>
+            <div>
+                <label for="emrg">Emerg. No</label>
+                <input type="text" id="emrg" name="number">
+            </div>
+            <div>
+                <label for="email">Email</label>
+                <input type="email" id="email" name="email">
+            </div>
+        </div>
+        <div class="address-details">
+            <h4>Address Details</h4>
+            <div class="residential-address">
+                <h4>Residential Address</h4>
+                <div>
+                    <label for="adres1">Address 1</label>
+                    <input type="text" id="adres1" name="adress" >
+                </div>
+                <div>
+                    <label for="adres2">Address 2</label>
+                    <input type="text" id="adres2" name="adress" >
+                </div>
+                <div>
+                    <label for="suberb">Suberb</label>
+                    <input type="text" id="suberb" name="adress">
+                    State
+                    <select name="state" id="">
+                        <option value="vic">VIC</option>
+                    </select>
+                </div>
+                <div>
+                    <label for="code">Postal Code</label>
+                    <input type="text" id="code" name="postal code">
+                    <label for="country">Country</label>
+                    <input type="text" id="country" name="Country" placeholder="AUSTRALIA">
+                </div>
+            </div>
+            <div class="single-address">
+                <h4>Single Address</h4>
+                Are Mailing Address and Residential address same? <input type="checkbox" id="box" name="same">Yes
+            </div>
+            <div class="mailing-address">
+                <h4>Mailing Address</h4>
+                <div>
+                    <label for="adres1">Address 1</label>
+                    <input type="text" id="adres1" name="adress" >
+                </div>
+                <div>
+                    <label for="adres2">Address 2</label>
+                    <input type="text" id="adres2" name="adress" >
+                </div>
+                <div>
+                    <label for="suberb">Suberb</label>
+                    <input type="text" id="suberb" name="adress">
+                    State
+                    <select name="state" id="state">
+                        <option value="state">VIC</option>
+                    </select>
+                </div>
+                <div>
+                    <label for="code">Postal Code</label>
+                    <input type="text" id="code" name="postal code">
+                    <label for="country">Country</label>
+                    <input type="text" id="country" name="Country" placeholder="AUSTRALIA">
+                </div>
+            </div>
+        </div>
+        <div class="bottom">
+            <div>
+                <label for="ihi">IHI Number 80036</label>
+                <input type="text" id="ihi" name="ihiNumber">
+            </div>
+            <div>
+                <label for="nStatus">Number Status</label>
+                <input type="text" id="nStatus" name="status">
+            </div>
+            <div>
+                <label for="rStatus">Record Status</label>
+                <input type="text" id="rStatus" name="status">
+            </div>
+            <div>
+                <label for="update">Last Updated</label>
+                <input type="text" id="update" name="update">
+            </div>
+            <div>
+                <input type="submit" value="Submit">
+                <input type="reset" value="Clear">
+            </div>
+        </div>
+    </form>
+    
+</body>
+</html>
