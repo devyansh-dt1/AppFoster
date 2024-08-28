@@ -1,0 +1,24 @@
+.container{
+    display: flex;
+    padding: 2em;
+}
+
+.stores{
+    padding: 1.5em;
+    height: 5em;
+    width: 5em;
+    text-align:center;
+}
+
+.stores:nth-child(1){
+    background-color: blue;
+    height: 5em;
+}
+
+.stores:nth-child(2){
+    background-color: violet;
+}
+
+.stores:nth-child(3){
+    background-color: red;
+}
