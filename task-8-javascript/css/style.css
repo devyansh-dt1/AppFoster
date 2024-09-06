@@ -1,0 +1,11 @@
+.container{
+    display: flex;
+    padding: 2em;
+}
+
+.stores{
+    padding: 1.5em;
+    height: 5em;
+    width: 5em;
+    text-align:center;
+}
