@@ -1,0 +1,62 @@
+body {
+    font-family: Arial, sans-serif;
+    padding: 30px;
+    margin-left:100px ;
+    margin-right: 100px;
+    border: solid black;
+    
+  }
+  .header {
+    display: flex;
+    justify-content: space-between;
+  }
+  
+  .info{
+    height: 20px;
+  }
+
+  .header-info {
+    text-align: center;
+    background-color: #f4f4f4;
+    width: 50%;
+  }
+
+  .profile-picture {
+    width: 220px;
+    height: 240px;
+    border: 10px solid #4caf50;
+  }
+  .image{
+    text-align: end;
+    width: 25%;
+    background-color: #f4f4f4;
+    padding: 7px;
+  }
+
+  .mid{
+    background-color: #f4f4f4;
+    margin-top: 50px;
+    padding: 50px;
+  }
+  .skills ul {
+    display: flex;
+    list-style-type: square;
+    flex-wrap: wrap;
+  }
+  .skills ul li {
+    width: 150px;
+    margin-bottom: 5px;
+  }
+  table {
+    width: 100%;
+    border-collapse: collapse;
+  }
+
+  table,th,td {
+    border: 1px solid #ddd;
+  }
+
+  th,td {
+    padding: 10px;
+    text-align: left;
+  }
