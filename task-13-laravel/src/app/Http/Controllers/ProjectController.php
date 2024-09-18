@@ -8,10 +8,9 @@ use App\Models\Project;
 
 class ProjectController extends Controller
 {
-    //
-    public function project($userId)
+    public function projects($userId)
     {
-        $projects = Project::where('user_id', $userId)->get();
+        $projects = Project::where('userId', $userId)->get();
         return response()->json($projects);
     }
 }
