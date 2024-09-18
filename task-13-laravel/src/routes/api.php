@@ -4,6 +4,7 @@ use Illuminate\Http\Request;
 use Illuminate\Support\Facades\Route;
 use App\Http\Controllers\Api\Books\BooksController;
 use App\Http\Controllers\UserController;
+use App\Http\Controllers\ProjectController;
 
 /*
 |--------------------------------------------------------------------------
@@ -31,6 +32,9 @@ Route::get('/', function () {
 });
 
 
-Route::get('host/users', [UserController::class,'list']);
+Route::get('/users', [UserController::class,'user']);
+Route::get('/users/{userId}/projects', [ProjectController::class, 'project']);
 
-Route::post('add-user', [UserController::class,'addUsers']);
+
+
+            
