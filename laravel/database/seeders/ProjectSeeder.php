@@ -6,6 +6,7 @@ use Illuminate\Database\Console\Seeds\WithoutModelEvents;
 use Illuminate\Database\Seeder;
 use App\Models\User;
 use App\Models\Project;
+use Faker\Factory as Faker;
 
 class ProjectSeeder extends Seeder
 {
@@ -14,11 +15,17 @@ class ProjectSeeder extends Seeder
      */
     public function run(): void
     {
-        //
-        User::all()->each(function ($user) {
-            $user->projects()->createMany(
-                Project::factory(3)->make()->toArray()
-            );
-        });
+        $faker = Faker::create();
+
+        foreach (User::all() as $user) {
+            for ($i = 0; $i < 5; $i++) {
+                Project::create([
+                    'user_id' => $user->id,
+                    'title' => $faker->sentence,
+                    'body' => $faker->paragraph
+
+                ]);
+            }
+        }
     }
 }

@@ -20,13 +20,17 @@ class UserSeeder extends Seeder
             $faker = Faker::create();
 
 
-            User::factory(10)->create([
-                'username' =>$faker->userName(),
-                'email'=>$faker->unique()->safeEmail(),
-                'phone' =>$faker->phoneNumber(),
-                
-
-            ]);
+            for ($i = 0; $i < 10; $i++) {
+                User::create([
+                    'name' => $faker->name,
+                    'username' => $faker->userName,
+                    'phone'=> $faker->phoneNumber,
+                    'email' => $faker->unique()->safeEmail,
+                    'website'=>$faker->domainName,
+                    'companyname'=>$faker->company,
+                    
+                ]);
+            }
         }
     }
 }
