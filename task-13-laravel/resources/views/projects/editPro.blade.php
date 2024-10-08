@@ -23,13 +23,13 @@
                     <div class="card-header bg-info">
                         <h3 class="text-white">Edit Project Details</h3>
                     </div>
-                    <form action="{{ route('projects.update',[$user->id,$project->id] ) }}" method="post">
+                    <form action="{{ route('projects.update', [$user->id, $project->id]) }}" method="post">
                         @method('put')
                         @csrf
                         <div class="card-body">
                             <div class="mb-3">
                                 <label class="h5">Project Title</label>
-                                <input type="text"
+                                <input value="{{ old('title', $project->title) }}" type="text"
                                     class="@error('title') is-invalid
                                     @enderror form-control form-control-lg "
                                     placeholder="Enter project Title" name="title">
@@ -39,7 +39,7 @@
                             </div>
                             <div class="mb-3">
                                 <label class="h5">Body</label>
-                                <textarea placeholder="Describe your Project" class="form-control" name="body" cols="30" rows="10"></textarea>
+                                <textarea placeholder="Describe your Project" class="form-control" name="body" cols="30" rows="10">{{ old('body', $project->body) }}</textarea>
                             </div>
                             <div>
                                 <button class="btn btn-lg btn-primary">Update Project</button>
