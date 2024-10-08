@@ -19,7 +19,7 @@
                 <a href="{{ route('users.create') }} " class="btn btn-success">Add New User</a>
             </div>
             @if (Session::has('success'))
-                <div class="col-md-11 mt-4">
+                <div class="col-md-12 mt-4">
                     <div class="alert alert-success">
                         {{ Session::get('success') }}
                     </div>
@@ -43,9 +43,9 @@
                                 <th>Action</th>
                             </tr>
                             @if ($users->isNotEmpty())
-                                @foreach ($users as $index=> $user)
+                                @foreach ($users as $index => $user)
                                     <tr>
-                                        <td>{{ $index+1 }}</td>
+                                        <td>{{ $index + 1 }}</td>
                                         <td>{{ $user->name }}</td>
                                         <td>{{ $user->username }}</td>
                                         <td>{{ $user->phone }}</td>
@@ -53,15 +53,19 @@
                                         <td>{{ $user->website }}</td>
                                         <td>{{ $user->companyname }}</td>
                                         <td>
-                                            <a href="{{ route('users.edit', $user->id) }}" class="btn btn-secondary">Edit</a>
-                                            <a href="{{route('projects.list', $user->id)}}" class="btn btn-primary">View</a>
-                                            <a href="#" onclick="deleteUser({{ $user->id }})"
-                                                class="btn btn-danger">Delete</a>
-                                            <form id="delete-user-from-{{ $user->id }}"
-                                                action="{{ route('users.delete', $user->id) }}" method="post">
-                                                @csrf
-                                                @method('delete')
-                                            </form>
+                                            <div class="d-flex">
+                                                <a href="{{ route('users.edit', $user->id) }}"
+                                                    class="btn btn-secondary me-2">Edit</a>
+                                                <a href="{{ route('projects.list', $user->id) }}"
+                                                    class="btn btn-primary me-2">View</a>
+                                                <a href="#" onclick="deleteUser({{ $user->id }})"
+                                                    class="btn btn-danger">Delete</a>
+                                                <form id="delete-user-from-{{ $user->id }}"
+                                                    action="{{ route('users.delete', $user->id) }}" method="post">
+                                                    @csrf
+                                                    @method('delete')
+                                                </form>
+                                            </div>
                                         </td>
                                     </tr>
                                 @endforeach

@@ -32,28 +32,31 @@
                         <table class="table">
                             <tr>
                                 <th>S.No</th>
-                                
+
                                 <th>title</th>
                                 <th>body</th>
                                 <th>Action</th>
                             </tr>
                             @if ($projects->isNotEmpty())
-                                @foreach ($projects as $index=> $project)
+                                @foreach ($projects as $index => $project)
                                     <tr>
-                                        <td>{{ $index+1 }}</td>
-                                       
+                                        <td>{{ $index + 1 }}</td>
+
                                         <td>{{ $project->title }}</td>
                                         <td>{{ $project->body }}</td>
                                         <td>
-                                            <a href="{{ route('projects.edit', [$user->id, $project->id]) }}" class="btn btn-secondary">Edit</a>
-                                            <a href="#" onclick="deleteProject({{ $project->id }})"
-                                                class="btn btn-danger">Delete</a>
-                                            <form id="delete-project-from-{{ $project->id }}"
-                                                action="{{ route('projects.delete', [$user->id, $project->id]) }}"
-                                                method="post">
-                                                @csrf
-                                                @method('delete')
-                                            </form>
+                                            <div class="d-flex">
+                                                <a href="{{ route('projects.edit', [$user->id, $project->id]) }}"
+                                                    class="btn btn-secondary me-2">Edit</a>
+                                                <a href="#" onclick="deleteProject({{ $project->id }})"
+                                                    class="btn btn-danger">Delete</a>
+                                                <form id="delete-project-from-{{ $project->id }}"
+                                                    action="{{ route('projects.delete', [$user->id, $project->id]) }}"
+                                                    method="post">
+                                                    @csrf
+                                                    @method('delete')
+                                                </form>
+                                            </div>
                                         </td>
                                     </tr>
                                 @endforeach

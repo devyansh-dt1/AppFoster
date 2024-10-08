@@ -11,13 +11,13 @@
 
 <body>
     <div class="bg-dark py-3">
-        <h3 class="text-white text-center">Users Page</h3>
+        <h3 class="text-white text-center">Enter New User Details</h3>
     </div>
     <div class="container">
         <div class="row d-flex justify-content-center mt-4">
-          <div class="col-md-10 d-flex justify-content-end">
-            <a href="{{route('users.index')}} " class="btn btn-dark" >Back</a>
-        </div>
+            <div class="col-md-10 d-flex justify-content-end">
+                <a href="{{ route('users.index') }} " class="btn btn-dark">Back</a>
+            </div>
             <div class="col-md-10">
                 <div class="card my-4">
                     <div class="card-header bg-info">
@@ -38,7 +38,8 @@
                             </div>
                             <div class="mb-3">
                                 <label class="h5">Username</label>
-                                <input value="{{old('username')}}" type="text" class=" @error('username') is-invalid
+                                <input value="{{ old('username') }}" type="text"
+                                    class=" @error('username') is-invalid
                                   
                                 @enderror form-control form-control-lg"
                                     placeholder="Enter your Username" name="username">
@@ -48,12 +49,13 @@
                             </div>
                             <div class="mb-3">
                                 <label class="h5">Phone</label>
-                                <input value="{{old('phone')}}" type="text" class="form-control form-control-lg" placeholder="Enter your No."
-                                    name="phone">
+                                <input value="{{ old('phone') }}" type="text" class="form-control form-control-lg"
+                                    placeholder="Enter your No." name="phone">
                             </div>
                             <div class="mb-3">
                                 <label class="h5">E-mail</label>
-                                <input value="{{old('email')}}"  type="email" class=" @error('email') is-invalid
+                                <input value="{{ old('email') }}" type="email"
+                                    class=" @error('email') is-invalid
                                   
                                 @enderror form-control form-control-lg"
                                     placeholder="Enter your e-mail" name="email">

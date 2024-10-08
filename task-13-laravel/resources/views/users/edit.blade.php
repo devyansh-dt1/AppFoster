@@ -16,7 +16,7 @@
     <div class="container">
         <div class="row d-flex justify-content-center mt-4">
             <div class="col-md-10 d-flex justify-content-end">
-                <a href="{{ route('users.index') }} " class="btn btn-secondary">Back</a>
+                <a href="{{ route('users.index') }} " class="btn btn-dark">Back</a>
             </div>
             <div class="col-md-10">
                 <div class="card  my-4">
@@ -29,7 +29,7 @@
                         <div class="card-body">
                             <div class="mb-3">
                                 <label for="" class="h5">Name</label>
-                                <input value="{{ old('name',$user->name) }}" type="text"
+                                <input value="{{ old('name', $user->name) }}" type="text"
                                     class=" @error('name') is-invalid      
                                 @enderror form-control form-control-lg "
                                     placeholder="Enter your Name" name="name">
@@ -39,7 +39,7 @@
                             </div>
                             <div class="mb-3">
                                 <label class="h5">Username</label>
-                                <input value="{{ old('username',$user->username) }}" type="text"
+                                <input value="{{ old('username', $user->username) }}" type="text"
                                     class=" @error('username') is-invalid
                                   
                                 @enderror form-control form-control-lg"
@@ -50,12 +50,12 @@
                             </div>
                             <div class="mb-3">
                                 <label class="h5">Phone</label>
-                                <input value="{{ old('phone',$user->phone) }}" type="text"
+                                <input value="{{ old('phone', $user->phone) }}" type="text"
                                     class="form-control form-control-lg" placeholder="Enter your No." name="phone">
                             </div>
                             <div class="mb-3">
                                 <label class="h5">E-mail</label>
-                                <input value="{{ old('email',$user->email) }}" type="email"
+                                <input value="{{ old('email', $user->email) }}" type="email"
                                     class=" @error('email') is-invalid
                                   
                                 @enderror form-control form-control-lg"
@@ -66,13 +66,13 @@
                             </div>
                             <div class="mb-3">
                                 <label class="h5">Website</label>
-                                <input value="{{ old('website',$user->website) }}" type="text"
+                                <input value="{{ old('website', $user->website) }}" type="text"
                                     class="form-control form-control-lg" placeholder="Enter your Website"
                                     name="website">
                             </div>
                             <div class="mb-3">
                                 <label for="" class="h5">Company Name</label>
-                                <input value="{{ old('companyname',$user->companyname) }}" type="text"
+                                <input value="{{ old('companyname', $user->companyname) }}" type="text"
                                     class="form-control form-control-lg" placeholder="Enter your Company Name"
                                     name="companyname">
                             </div>
